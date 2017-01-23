@@ -1,0 +1,30 @@
+#include ".colors/base-16/base16-londontube.dark.256.xresources"
+!Xft.dpi: 160
+
+! URxvt config
+URxvt.scrollBar: False
+URxvt.font: xft:Fira Mono:size=10
+URxvt.saveLines: 10000
+
+URxvt.perl-ext-common: default,matcher,vtwheel
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 1
+
+URxvt.lineSpace: 8
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+
+#define rofibg base00
+#define rofihl base0D
+#define rofifg base05
+
+rofi.color-enabled: true
+rofi.separator-style: solid
+rofi.color-window: rofibg, rofibg, rofihl
+rofi.color-normal: rofibg, rofifg, rofibg, rofihl, rofifg
+rofi.color-active: rofibg, #268bd2, rofibg, rofihl, #205171
+rofi.color-urgent: rofibg, #f3843d, rofibg, rofihl, #ffc39c
+
+
