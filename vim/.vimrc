@@ -35,12 +35,10 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('Shougo/neocomplete.vim')
 
   call dein#add('editorconfig/editorconfig-vim')
-  call dein#add('commentToggle')
   call dein#add('terryma/vim-multiple-cursors')
   call dein#add('ntpeters/vim-better-whitespace')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('mhinz/vim-startify')
-  call dein#add('nathanaelkane/vim-indent-guides')
 
   " Required:
   call dein#end()
@@ -67,6 +65,10 @@ let g:skipview_files = ['*\.vim']
 set fdm=marker 			"fold method to marker
 set tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
+let g:neocomplete#enable_at_startup = 1
+
+set noeb novb t_vb=
+
 "Gui Options-----------------------------
 
 colorscheme atom-dark
@@ -86,8 +88,7 @@ set guioptions-=e
 set noeb vb t_vb=
 
 hi LineNr guibg=bg
-set numberwidth=6
-"hi TabLineSel guibg=#445566
+set numberwidth=4
 
 set nohlsearch
 set incsearch
@@ -101,7 +102,8 @@ nmap <leader>pi :call dein#install()<cr>
 nmap <leader>pu :call dein#update()<cr>
 
 nmap <leader>ev :e ~/.vimrc<cr>
-"nmap <leader>es :UltiSnipsEdit<cr>
+nmap <leader>es :UltiSnipsEdit<cr>
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 set splitbelow
 set splitright
