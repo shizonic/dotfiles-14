@@ -1,5 +1,5 @@
-#include ".colors/base-16/base16-londontube.dark.256.xresources"
-!Xft.dpi: 160
+#include ".colors/base-16/base16-default.dark.256.xresources"
+!#include ".colors/custom/pastel.xresources"
 
 ! URxvt config
 URxvt.scrollBar: False
@@ -18,15 +18,26 @@ URxvt.secondaryScroll: 0
 URxvt.iso14755: False
 
 
-#define rofibg base00
-#define rofihl base0D
-#define rofifg base05
+!#define rofibg .color0
+!#define rofihl .color1
+!#define rofifg .color3
 
-rofi.color-enabled: true
-rofi.separator-style: solid
-rofi.color-window: rofibg, rofibg, rofihl
-rofi.color-normal: rofibg, rofifg, rofibg, rofihl, rofifg
-rofi.color-active: rofibg, #268bd2, rofibg, rofihl, #205171
-rofi.color-urgent: rofibg, #f3843d, rofibg, rofihl, #ffc39c
+!rofi.color-enabled: true
+!rofi.separator-style: solid
+!rofi.color-window: rofibg, rofibg, rofihl
+!rofi.color-normal: rofibg, rofifg, rofibg, rofihl, rofifg
+!rofi.color-active: rofibg, #268bd2, rofibg, rofihl, #205171
+!rofi.color-urgent: rofibg, #f3843d, rofibg, rofihl, #ffc39c
 
-
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   #ffffff,#525d76,#f5f5f5,#5294e2,#ffffff
+! Color scheme for urgent row
+rofi.color-urgent:                   #ffffff,#dc322f,#f5f5f5,#5294e2,#dc322f
+! Color scheme for active row
+rofi.color-active:                   #ffffff,#c2cad0,#f5f5f5,#5294e2,#c2cad0
+! Color scheme window
+rofi.color-window:                   #ffffff,#f5f5f5
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
