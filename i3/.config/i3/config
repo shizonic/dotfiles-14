@@ -135,34 +135,34 @@ set_from_resource $cyan        color14
 set_from_resource $darkwhite   color7
 set_from_resource $white       color15
 
-#                       BORDER     	BACKGROUND 	TEXT   		INDICATOR
-client.focused          $black  	$black	    	$white 		$black
-client.unfocused        $darkblack 	$darkblack  	$white 		$darkwhite
-client.focused_inactive $darkblack 	$black     	$white 		$darkwhite
-client.urgent           $red       	$red       	$white 		$red
+#                       BORDER     	BACKGROUND		TEXT				INDICATOR
+client.focused          $black  		$black	    	$darkwhite	$black
+client.unfocused        $darkblack 	$darkblack  	$darkwhite 	$darkwhite
+client.focused_inactive $darkblack 	$darkblack     		$white 			$darkwhite
+client.urgent           $red       	$red       		$white 			$red
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-	strip_workspace_numbers yes
-	height 42
+		status_command i3status
+		strip_workspace_numbers yes
+		height 42
 
-	colors {
-		background $darkblack
-		statusline $darkwhite
-		separator $black
+		colors {
+					 background $darkblack
+					 statusline $darkwhite
+					 separator $black
 
-		#			BORDER 		BACKGROUN 	TEXT
-		focused_workspace  	$black 	 	$black 		$darkwhite
-		inactive_workspace 	$darkblack 	$darkblack 	$black
-		urgent_workspace   	#2f343a 	#900000 	#ffffff
-		binding_mode       	#2f343a 	#900000 	#ffffff
-	}
+													#			BORDER 		BACKGROUN 	TEXT
+					 focused_workspace  	$black 	 	$black 		$darkwhite
+					 inactive_workspace 	$darkblack 	$darkblack 	$black
+					 urgent_workspace   	#2f343a 	#900000 	#ffffff
+					 binding_mode       	#2f343a 	#900000 	#ffffff
+					 }
 }
 
 exec nitrogen --restore &
 exec numlockx &
 exec xsetroot -cursor_name left_ptr &
 exec xcompmgr -c &
-
+exec ssh-agent &
