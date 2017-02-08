@@ -8,7 +8,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+						 '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
@@ -42,16 +42,16 @@
 (setq-default tab-width 2)
 (show-paren-mode 1)
 (setq dired-listing-switches "-alh --group-directories-first")
-
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Enable Emacs auto-pair-----------------------
 (electric-pair-mode 1)
 
- (use-package auto-complete
+(use-package auto-complete
   :ensure t
   :config
-    (ac-config-default)
-    (global-auto-complete-mode t))
+	(ac-config-default)
+	(global-auto-complete-mode t))
 
 (use-package base16-theme
 	:ensure t)
@@ -64,7 +64,7 @@
 (use-package flycheck
   :ensure t
   :config
-    (global-flycheck-mode))
+	(global-flycheck-mode))
 
 (use-package ivy
   :ensure t
