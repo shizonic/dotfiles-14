@@ -10,7 +10,7 @@ URxvt.perl-ext-common: default,matcher,vtwheel
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 
-URxvt.lineSpace: 8
+URxvt.lineSpace: 18
 
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0

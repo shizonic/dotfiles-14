@@ -6,6 +6,13 @@ set $mod Mod4
 # Font
 font pango:Fira Mono, FontAwesome 10
 
+# gaps
+gaps inner 30
+smart_borders on
+
+new_window pixel 4
+hide_edge_borders none
+
 # Movement
 set $up k
 set $down j
@@ -128,8 +135,6 @@ set_from_resource $cyan        color14
 set_from_resource $darkwhite   color7
 set_from_resource $white       color15
 
-new_window pixel 3
-hide_edge_borders none
 #                       BORDER     	BACKGROUND 	TEXT   		INDICATOR
 client.focused          $black  	$black	    	$white 		$black
 client.unfocused        $darkblack 	$darkblack  	$white 		$darkwhite
@@ -141,20 +146,23 @@ client.urgent           $red       	$red       	$white 		$red
 bar {
         status_command i3status
 	strip_workspace_numbers yes
-colors {
-background $darkblack
-statusline $darkwhite
-separator $black
+	height 42
 
-#			BORDER 		BACKGROUN 	TEXT
-focused_workspace  	$black 	 	$black 		$darkwhite
-inactive_workspace 	$darkblack 	$darkblack 	$black
-urgent_workspace   	#2f343a 	#900000 	#ffffff
-binding_mode       	#2f343a 	#900000 	#ffffff
-}
+	colors {
+		background $darkblack
+		statusline $darkwhite
+		separator $black
+
+		#			BORDER 		BACKGROUN 	TEXT
+		focused_workspace  	$black 	 	$black 		$darkwhite
+		inactive_workspace 	$darkblack 	$darkblack 	$black
+		urgent_workspace   	#2f343a 	#900000 	#ffffff
+		binding_mode       	#2f343a 	#900000 	#ffffff
+	}
 }
 
 exec nitrogen --restore &
 exec numlockx &
 exec xsetroot -cursor_name left_ptr &
+exec xcompmgr -c &
 
