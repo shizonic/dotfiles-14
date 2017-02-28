@@ -165,4 +165,5 @@ exec nitrogen --restore &
 exec numlockx &
 exec xsetroot -cursor_name left_ptr &
 exec xcompmgr -c &
-exec ssh-agent &
+exec setxkbmap -option 'ctrl:nocaps' &
+

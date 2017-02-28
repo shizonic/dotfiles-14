@@ -43,6 +43,7 @@
 (show-paren-mode 1)
 (setq dired-listing-switches "-alh --group-directories-first")
 (fset 'yes-or-no-p 'y-or-n-p)
+;(setq tab-always-indent nil)
 
 ;; Enable Emacs auto-pair-----------------------
 (electric-pair-mode 1)
@@ -74,9 +75,6 @@
 (use-package magit
   :ensure t)
 
-(use-package moe-theme
-  :ensure t)
-
 (use-package php-mode
   :ensure t)
 
@@ -85,24 +83,25 @@
   :config
   (projectile-mode 1))
 
-(use-package pug-mode
-  :ensure t
-  :config
-  (setq pug-backspace-backdents-nesting nil))
+;(use-package pug-mode
+;  :ensure t
+;  :config
+;  (setq pug-backspace-backdents-nesting nil))
 
-(use-package sass-mode
-  :ensure t
-  :config
-  (defun configure-auto-complete-for-sass ()
-    (add-to-list 'ac-sources 'ac-source-css-property))
-  (add-hook 'sass-mode-hook 'configure-auto-complete-for-sass)
-  (add-to-list 'ac-modes 'sass-mode))
+;(use-package sass-mode
+;  :ensure t
+;  :config
+;  (defun configure-auto-complete-for-sass ()
+;    (add-to-list 'ac-sources 'ac-source-css-property))
+;  (add-hook 'sass-mode-hook 'configure-auto-complete-for-sass)
+;  (add-to-list 'ac-modes 'sass-mode))
 
 (use-package try
   :ensure t)
 
-(use-package vue-mode
-  :ensure t)
+;(use-package vue-mode
+;  :ensure t)
 
-(use-package web-mode
-  :ensure t)
+;(use-package web-mode
+;  :ensure t)
+
