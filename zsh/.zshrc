@@ -29,3 +29,8 @@ antibody bundle lukechilds/zsh-nvm
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+source /etc/profile.d/autojump.zsh
+
+export PATH=~/.bin:$PATH
