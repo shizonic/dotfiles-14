@@ -1,3 +1,3 @@
 xrdb -merge -I$HOME ~/.Xresources
-exec i3
+exec bspwm
 

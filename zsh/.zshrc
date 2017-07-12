@@ -34,3 +34,5 @@ bindkey "${terminfo[kend]}" end-of-line
 source /etc/profile.d/autojump.zsh
 
 export PATH=~/.bin:$PATH
+
+alias ls="ls --color"

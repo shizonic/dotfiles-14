@@ -1,4 +1,4 @@
-#include ".colors/base-16/base16-default.dark.256.xresources"
+!#include ".colors/base-16/base16-default.dark.256.xresources"
 !#include ".colors/custom/pastel.xresources"
 
 ! URxvt config
