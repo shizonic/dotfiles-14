@@ -36,3 +36,7 @@ source /etc/profile.d/autojump.zsh
 export PATH=~/.bin:$PATH
 
 alias ls="ls --color"
+
+alias la="ls -lha"
+alias ll="ls -lh"
+alias l="ls"

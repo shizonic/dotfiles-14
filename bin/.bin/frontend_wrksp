@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Workspace for frontend work
+
+WORK_DIR=~/Projects/mt-xi
+
+bspc node -i
+bspc node @/ -p east -i
+bspc node @/2 -p south -o 0.6 -i
+bspc node @/2/2 -p east -i
+
+bspc rule -a Atom:atom -o node=@/1
+bspc rule -a Chromium:chromium -o node=@/2/1
+bspc rule -a URxvt:urxvt -o node=@/2/2/1
+bspc rule -a URxvt:urxvt -o node=@/2/2/2
+
+atom $WORK_DIR &
+chromium &
+urxvt -cd $WORK_DIR &
+urxvt -cd $WORK_DIR &

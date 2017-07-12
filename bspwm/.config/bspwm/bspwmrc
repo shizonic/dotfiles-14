@@ -1,0 +1,31 @@
+#! /bin/zsh
+
+sxhkd &
+panel &
+
+echo "hello" 
+
+nitrogen --restore &
+numlockx &
+xsetroot -cursor_name left_ptr &
+xcompmgr -c &
+setxkbmap -option 'ctrl:nocaps' &
+
+#bspc monitor -d I II III IV V VI VII VIII IX X
+# bspc monitor -d $(echo -e '\uf109') $(echo -e '\uf121') $(echo -e '\uf120') $(echo -e '\uf07c') $(echo -e '\uf0ac') $(echo -e '\uf0c3')  $(echo -e '\uf141') $(echo -e '\uf001')
+bspc monitor -d $(echo -e '\uf120') $(echo -e '\uf108') $(echo -e '\uf233') $(echo -e '\uf1c0') $(echo -e '\uf0ac') $(echo -e '\uf07c') $(echo -e '\uf121') $(echo -e '\uf085') $(echo -e '\uf01c') $(echo -e '\uf001')
+
+
+bspc config border_width         6
+bspc config window_gap           20
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
