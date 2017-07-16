@@ -54,7 +54,7 @@
 	(ac-config-default)
 	(global-auto-complete-mode t))
 
-(use-package base16-theme
+(use-package nord-theme
 	:ensure t)
 
 (use-package counsel-projectile
@@ -104,4 +104,3 @@
 
 ;(use-package web-mode
 ;  :ensure t)
-

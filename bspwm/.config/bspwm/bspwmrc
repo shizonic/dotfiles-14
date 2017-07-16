@@ -3,8 +3,6 @@
 sxhkd &
 panel &
 
-echo "hello" 
-
 nitrogen --restore &
 numlockx &
 xsetroot -cursor_name left_ptr &

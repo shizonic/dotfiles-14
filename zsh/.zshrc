@@ -22,6 +22,7 @@ antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-history-substring-search
+antibody bundle hkupty/ssh-agent
 
 export NVM_LAZY_LOAD=true
 antibody bundle lukechilds/zsh-nvm
@@ -40,3 +41,9 @@ alias ls="ls --color"
 alias la="ls -lha"
 alias ll="ls -lh"
 alias l="ls"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gs="git status"
+alias gl="git log"
+alias nah="git reset --hard && git clean -df"
